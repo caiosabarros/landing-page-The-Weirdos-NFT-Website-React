@@ -1,0 +1,13 @@
+{
+    "apiProvider": true,
+    "walletProviders": ["metamask", "wallet-connect"],
+    "socialLogin": true,
+    "socialLoginVerifiers": ["facebook", "google"],
+    "title": "Espaço goBlockchain",
+    "networkType": "testnet",
+    "blockchain": "polygon",
+    "contractAddress": "0xfc2CB5a2aB16B5f8FE5bAB29Fd5E11619F92995E",
+    "currency": "BRL",
+    "GATrackinID": "UA-107225502-1",
+    "mainColor": "#009FE3"
+  }
