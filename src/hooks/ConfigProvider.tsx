@@ -15,7 +15,7 @@ type Config = {
     contractAddress: string
     currency: 'BRL' | 'USD'
     //GA is not here
-    mainColor
+    mainColor: string
 }
 
 //creating variable called config of type config
@@ -25,6 +25,8 @@ interface IConfigContext {
 }
 
 //we create a CONTEXT of type IConfigContext with an empty obj of IConfigContext as the starting value 
+// I couold have had a context of the type string, but I declared it to have the type of the interface 
+//Iconfigcontext
 const ConfigContext = createContext<IConfigContext>({} as IConfigContext)
 
 //We create a function that returns the Config.Provider so that it 
@@ -60,3 +62,13 @@ export const useConfig = () => {
     }
     return context
 }
+
+//To end up well, let's then understand piece by piece:'
+/*
+Provider is a component who is declared above the children which are able to useContext
+useContext is used by the components inside the provider
+createContext is the context created so that all the children under provider may useContext
+The context itself is an obj state - for example- and this obj can be passed to anyone.
+This obj is passed in the value in the provider of this obj
+
+*/
