@@ -2,6 +2,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
 import { light } from "./styles/Themes";
 
+import { useNotification } from "./hooks/NotificationContext.tsx"
 import Navigation from "./components/Navigation";
 import Home from "./components/sections/Home";
 import About from "./components/sections/About";
@@ -11,8 +12,17 @@ import Team from "./components/sections/Team";
 import Faq from "./components/sections/Faq";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { useEffect } from "react";
+
 
 function App() {
+
+  const { emitNotificationModal, onCloseModificationModal } = useNotification()
+
+  useEffect(()=>{
+    
+  },[])
+
   return (
     <>
       <GlobalStyles />

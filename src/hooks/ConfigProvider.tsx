@@ -35,7 +35,13 @@ const ConfigContext = createContext<IConfigContext>({} as IConfigContext)
 //This function takes two arguments because it gets the default argumetn children
 //to make them appear somewhere and the config is taken from within the 
 //page, I guess, to show it in the value propety.
-export const ConfigProvider = ({children, config}: ) => {
+
+type ConfigProviderProps = {
+    children: React.ReactNode
+    config: Config
+  }
+
+export const ConfigProvider = ({children, config}: ConfigProviderProps) => {
     return (
         //value is the state that is passed to everyone whichs child.
         <ConfigContext.Provider value={IConfigContext.config}>
@@ -70,5 +76,5 @@ useContext is used by the components inside the provider
 createContext is the context created so that all the children under provider may useContext
 The context itself is an obj state - for example- and this obj can be passed to anyone.
 This obj is passed in the value in the provider of this obj
-
+I can only import things that are inside the value props.
 */
